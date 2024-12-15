@@ -24,7 +24,7 @@ public class Player : PlayerInfo
     void Start()
     {
 
-        rigidBody = GetComponent<Rigidbody>();
+        rigidBody = GetComponent<Rigidbody>(); 
 
     }
 
@@ -45,7 +45,7 @@ public class Player : PlayerInfo
 
         moveInput.y = 0;
 
-        rigidBody.velocity = moveInput.normalized * speed;
+        rigidBody.velocity = moveInput.normalized * speed; //расчёт поворота камеры засчёт умноения вводимых данных мыши xy и скорости чувствительности, предустановленной в игре
 
     }
 
