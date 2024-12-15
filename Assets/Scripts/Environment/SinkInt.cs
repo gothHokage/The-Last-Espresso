@@ -19,7 +19,7 @@ public class SinkInt : InteractableObject
         /*isClosetOpen = !isClosetOpen;
         closetAnimator.SetBool("IsClosetOpen", isClosetOpen);*/
 
-        Debug.Log("Ќапиток смыта"); //выводит в консоль надпись о том, что напиток был вылит в раковину
+        Debug.Log("Ќапиток смыта"); //выводит в консоль надпись о том, что напиток был вылит в раковину.
 
 
     }
