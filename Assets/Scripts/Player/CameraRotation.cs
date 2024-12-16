@@ -18,6 +18,7 @@ public class CameraRotationInfo : MonoBehaviour
 
     //Scripts
     public UIHelpSystem UI;
+    protected GrabSystem grabSystem;
 
 }
 
@@ -31,7 +32,7 @@ public class CameraRotation : CameraRotationInfo
 
         cam = GetComponent<Camera>();
         player = GetComponentInParent<Player>();
-
+        grabSystem = player.GetComponent<GrabSystem>();
 
     }
 
@@ -80,10 +81,15 @@ public class CameraRotation : CameraRotationInfo
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     interactable.Interact(player);
+                    if (hit.collider.CompareTag("Pickable"))
+                    {
+                        grabSystem.PickUpItem(hit.collider.gameObject);
+
+                    }
+
                 }
+
             }
-
-
 
         }
 
